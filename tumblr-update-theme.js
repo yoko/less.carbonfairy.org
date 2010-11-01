@@ -20,7 +20,7 @@ request.end(querystring.stringify({
 	'password'   : password
 }));
 request.on('response', function(response) {
-	console.log('login:', response.statusCode);
+	console.log('login as '+email+':', response.statusCode);
 	if (response.statusCode != 200) return;
 
 	var cookie = response.headers['set-cookie'].map(function(cookie) {
@@ -65,7 +65,7 @@ request.on('response', function(response) {
 					data
 				].join('\r\n'));
 				request.on('response', function(response) {
-					console.log('apply:', response.statusCode);
+					console.log('update '+account+':', response.statusCode);
 				});
 			});
 		});
