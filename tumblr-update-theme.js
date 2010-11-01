@@ -5,7 +5,7 @@ var http = require('http'),
 
 var argv = process.argv;
 if (argv.length != 6) {
-	console.log('usage: node tumblr-deploy-theme.js email password account theme_file');
+	console.log('usage: node tumblr-update-theme.js email password account theme_file');
 	process.exit(1);
 }
 var email = argv[2], password = argv[3], account = argv[4], theme = argv[5];
