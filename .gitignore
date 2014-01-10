@@ -1,1 +1,7 @@
-deploy.sh
+node_modules
+bower_components
+.sass-cache
+
+css/*.css
+js/*.js
+js/*.min

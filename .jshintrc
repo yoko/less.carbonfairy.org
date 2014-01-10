@@ -1,0 +1,28 @@
+// JSHint Options
+// http://www.jshint.com/docs/options/
+{
+  "globals": {
+    "Hogan": false,
+    "templates": false
+  },
+  "browser": true,
+  "devel": true,
+  "jquery": true,
+
+  "eqeqeq": true,
+  "freeze": true,
+  "newcap": true,
+  "noarg": true,
+  "noempty": true,
+  "quotmark": "single",
+  "undef": true,
+  "unused": true,
+  "strict": true,
+  "trailing": true,
+
+  "boss": true,
+  "expr": true,
+  "smarttabs": true,
+  "supernew": true,
+  "validthis": true
+}
