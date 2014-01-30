@@ -58,7 +58,7 @@ module.exports = function(grunt) {
 					prettify: true,
 					templateOptions: {
 						asString: true,
-						// Tumblrの「{ }」ともGruntの「<% %>」にも被らない指定を適当に
+						// Tumblrの「{ }」にもGruntの「<% %>」にも被らない指定を適当に
 						delimiters: '<? ?>',
 					},
 				},
