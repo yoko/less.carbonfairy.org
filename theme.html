@@ -11,10 +11,8 @@
 </head>
 
 <body>
-<a href="/" class="index"></a>
-
 <header class="header">
-	<h1 class="title">less</h1>
+	<h1 class="title"><a href="/">less</a></h1>
 	{block:DayPage}
 		<h2 class="context"><span class="day">{ShortMonth} {DayOfMonth}, {Year}</span><a href="/archives" class="close"><img src="https://dl.dropboxusercontent.com/u/19242/less/images/close.png" width="14" height="14"></a></h2>
 	{/block:DayPage}
@@ -68,28 +66,26 @@
 
 			<div class="relation">
 				<div class="relation-wrapper">
-					<div class="meta">
-						{block:Date}
-							<a href="{Permalink}"><time class="date" datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}T{24HourWithZero}:{Minutes}:{Seconds}+0900">{ShortMonth} {DayOfMonth}, {Year}</time></a><!--
-						{/block:Date}
-						-->{block:PostNotes}
-							<div class="note-count">{NoteCountWithLabel}</div>
-						{/block:PostNotes}<!--
+					<div class="meta"><!--
+						-->{block:Date}<!--
+							--><a href="{Permalink}"><time class="date" datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}T{24HourWithZero}:{Minutes}:{Seconds}+0900">{ShortMonth} {DayOfMonth}, {Year}</time></a><!--
+						-->{/block:Date}<!--
+						-->{block:PostNotes}<!--
+							--><div class="note-count">{NoteCountWithLabel}</div><!--
+						-->{/block:PostNotes}<!--
 						-->{block:HasTags}<ul class="tags"><!--
 							{block:Tags}
 								--><li><a href="{TagURL}" class="tag">{Tag}</a></li><!--
 							{/block:Tags}
-						--></ul>{/block:HasTags}
+						--></ul>{/block:HasTags}<!--
 
-						{block:PostNotes}
-							{PostNotes-64}
-							<!--
-							<ul class="users">
-								<li><a href="http://flavors.me/yksk"><img src="https://ja.gravatar.com/avatar/6d4cc28deedb0378ecb67bb9bc818381" alt="yksk" width="32" height="32"></a></li>
-							</ul>
-							-->
-						{block:PostNotes}
-					</div>
+						PostNotes-64:
+						<ul class="users">
+							<li><a href="http://flavors.me/yksk"><img src="https://ja.gravatar.com/avatar/6d4cc28deedb0378ecb67bb9bc818381" alt="yksk" width="32" height="32"></a></li>
+							...
+						</ul>
+						-->{block:PostNotes}{PostNotes-64}{block:PostNotes}<!--
+					--></div>
 				</div>
 			</div>
 		</article>
@@ -97,9 +93,10 @@
 </div>
 
 {block:PermalinkPagination}
+	<!-- 左を新しくするためにprev、nextを逆にする -->
 	<nav class="pagination"><!--
-		--><div class="prev">{block:PreviousPost}<a href="{PreviousPost}"><img src="https://dl.dropboxusercontent.com/u/19242/less/images/prev.png" width="20" height="20"></a>{/block:PreviousPost}</div><!--
-		--><div class="next">{block:NextPost}<a href="{NextPost}"><img src="https://dl.dropboxusercontent.com/u/19242/less/images/next.png" width="20" height="20"></a>{/block:NextPost}</div><!--
+		--><div class="prev">{block:NextPost}<a href="{NextPost}"><img src="https://dl.dropboxusercontent.com/u/19242/less/images/prev.png" width="20" height="20"></a>{/block:NextPost}</div><!--
+		--><div class="next">{block:PreviousPost}<a href="{PreviousPost}"><img src="https://dl.dropboxusercontent.com/u/19242/less/images/next.png" width="20" height="20"></a>{/block:PreviousPost}</div><!--
 	--></nav>
 {/block:PermalinkPagination}
 {block:Pagination}
