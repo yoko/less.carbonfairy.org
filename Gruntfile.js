@@ -94,24 +94,16 @@ module.exports = function(grunt) {
 			options: {
 				compress: true,
 				report: 'min',
+				sourceMap: true,
 			},
 			lib: {
-				options: {
-					sourceMap: 'js/lib.js.map',
-					sourceMappingURL: 'lib.js',
-					preserveComments: 'some',
-				},
 				files: {
 					'js/lib.min.js': '<%= concat.jslib.dest %>',
 				},
 			},
 			app: {
-				options: {
-					sourceMap: 'js/app.js.map',
-					sourceMappingURL: 'app.js',
-				},
 				files: {
-					'js/app.min.js': '<%= concat.js.dest %>'
+					'js/app.min.js': '<%= concat.js.dest %>',
 				}
 			}
 		},
