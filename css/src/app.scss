@@ -41,11 +41,6 @@ a {
   }
 }
 
-h1 {
-  margin: 1em 0;
-  font-size: 16px;
-}
-
 p {
   margin: 0 0 1em;
 }
@@ -186,12 +181,14 @@ article {
   line-height: 2;
   text-align: justify;
 
-  h1 {
-
+  h1,
+  h2 {
+    margin: 1em 0;
+    font-size: 16px;
   }
 
   h2 {
-
+    font-weight: normal;
   }
 
   img {
