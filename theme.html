@@ -3,21 +3,21 @@
 <head>
 	<meta charset="utf-8">
 	<title>{block:IndexPage}{Title}{/block:IndexPage}{block:PostSummary}{PostSummary}{/block:PostSummary}</title>
-	<link rel="icon" href="https://dl.dropboxusercontent.com/u/19242/less/images/icon.png">
-	<link rel="stylesheet" href="https://dl.dropboxusercontent.com/u/19242/less/css/lib.css">
-	<link rel="stylesheet" href="https://dl.dropboxusercontent.com/u/19242/less/css/app.css">
-	<script src="https://dl.dropboxusercontent.com/u/19242/less/js/lib.js"></script>
-	<script src="https://dl.dropboxusercontent.com/u/19242/less/js/app.js"></script>
+	<link rel="icon" href="//yoko.github.io/less.carbonfairy.org/images/icon.png">
+	<link rel="stylesheet" href="//yoko.github.io/less.carbonfairy.org/images/close.png">
+	<link rel="stylesheet" href="//yoko.github.io/less.carbonfairy.org/css/app.css">
+	<script src="//yoko.github.io/less.carbonfairy.org/js/lib.js"></script>
+	<script src="//yoko.github.io/less.carbonfairy.org/js/app.js"></script>
 </head>
 
 <body>
 <header class="header">
 	<h1 class="title"><a href="/">less</a></h1>
 	{block:DayPage}
-		<h2 class="context"><span class="day">{ShortMonth} {DayOfMonth}, {Year}</span><a href="/archives" class="close"><img src="https://dl.dropboxusercontent.com/u/19242/less/images/close.png" width="14" height="14"></a></h2>
+		<h2 class="context"><span class="day">{ShortMonth} {DayOfMonth}, {Year}</span><a href="/archives" class="close"><img src="//yoko.github.io/less.carbonfairy.org/images/close.png" width="14" height="14"></a></h2>
 	{/block:DayPage}
 	{block:TagPage}
-		<h2 class="context"><span class="tag">#{Tag}</span><a href="/" class="close"><img src="https://dl.dropboxusercontent.com/u/19242/less/images/close.png" width="14" height="14"></a></h2>
+		<h2 class="context"><span class="tag">#{Tag}</span><a href="/" class="close"><img src="//yoko.github.io/less.carbonfairy.org/images/close.png" width="14" height="14"></a></h2>
 	{/block:TagPage}
 </header>
 
@@ -57,11 +57,11 @@
 			{/block:Photo}
 
 			{block:Photoset}
+				<!--{JSPhotosetLayout}-->
 				{block:Caption}
 					<div class="caption">{Caption}</div>
 				{/block:Caption}
 				{Photoset}
-				<!--{JSPhotosetLayout}-->
 			{/block:Photoset}
 
 			<div class="relation">
@@ -95,22 +95,22 @@
 {block:PermalinkPagination}
 	<!-- 左を新しくするためにprev、nextを逆にする -->
 	<nav class="pagination"><!--
-		--><div class="prev">{block:NextPost}<a href="{NextPost}"><img src="https://dl.dropboxusercontent.com/u/19242/less/images/prev.png" width="20" height="20"></a>{/block:NextPost}</div><!--
-		--><div class="next">{block:PreviousPost}<a href="{PreviousPost}"><img src="https://dl.dropboxusercontent.com/u/19242/less/images/next.png" width="20" height="20"></a>{/block:PreviousPost}</div><!--
+		--><div class="prev">{block:NextPost}<a href="{NextPost}"><img src="//yoko.github.io/less.carbonfairy.org/images/prev.png" width="20" height="20"></a>{/block:NextPost}</div><!--
+		--><div class="next">{block:PreviousPost}<a href="{PreviousPost}"><img src="//yoko.github.io/less.carbonfairy.org/images/next.png" width="20" height="20"></a>{/block:PreviousPost}</div><!--
 	--></nav>
 {/block:PermalinkPagination}
 {block:Pagination}
 	<nav class="pagination">
-		<div class="prev">{block:PreviousPage}<a href="{PreviousPage}"><img src="https://dl.dropboxusercontent.com/u/19242/less/images/prev.png" width="20" height="20"></a>{/block:PreviousPage}</div><!--
-		--><div class="next">{block:NextPage}<a href="{NextPage}"><img src="https://dl.dropboxusercontent.com/u/19242/less/images/next.png" width="20" height="20"></a>{/block:NextPage}</div>
+		<div class="prev">{block:PreviousPage}<a href="{PreviousPage}"><img src="//yoko.github.io/less.carbonfairy.org/images/prev.png" width="20" height="20"></a>{/block:PreviousPage}</div><!--
+		--><div class="next">{block:NextPage}<a href="{NextPage}"><img src="//yoko.github.io/less.carbonfairy.org/images/next.png" width="20" height="20"></a>{/block:NextPage}</div>
 		<div class="page-count">{CurrentPage}/{TotalPages}</div>
 	</nav>
 {/block:Pagination}
 {block:DayPagination}
 	<!-- 左を新しくするためにprev、nextを逆にする -->
 	<nav class="pagination"><!--
-		--><div class="prev">{block:NextDayPage}<a href="{NextDayPage}"><img src="https://dl.dropboxusercontent.com/u/19242/less/images/prev.png" width="20" height="20"></a>{/block:NextDayPage}</div><!--
-		--><div class="next">{block:PreviousDayPage}<a href="{PreviousDayPage}"><img src="https://dl.dropboxusercontent.com/u/19242/less/images/next.png" width="20" height="20"></a>{/block:PreviousDayPage}</div><!--
+		--><div class="prev">{block:NextDayPage}<a href="{NextDayPage}"><img src="//yoko.github.io/less.carbonfairy.org/images/prev.png" width="20" height="20"></a>{/block:NextDayPage}</div><!--
+		--><div class="next">{block:PreviousDayPage}<a href="{PreviousDayPage}"><img src="//yoko.github.io/less.carbonfairy.org/images/next.png" width="20" height="20"></a>{/block:PreviousDayPage}</div><!--
 	--></nav>
 {/block:DayPagination}
 
@@ -128,7 +128,7 @@
 				<input type="hidden" name="ie" value="UTF-8">
 				<input type="text" name="q" size="32" placeholder="Search">
 				<button type="submit" name="sa">
-					<img src="https://dl.dropboxusercontent.com/u/19242/less/images/search.png" width="16" height="16">
+					<img src="//yoko.github.io/less.carbonfairy.org/images/search.png" width="16" height="16">
 				</button>
 			</form>
 <!-- 			<ul class="buttons">
@@ -222,6 +222,7 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-165892-3', 'carbonfairy.org');
+  ga('require', 'displayfeatures');
   ga('send', 'pageview');
 </script>
 </body>
