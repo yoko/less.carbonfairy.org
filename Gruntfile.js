@@ -25,9 +25,8 @@ module.exports = function(grunt) {
 		concat: {
 			jslib: {
 				src: [
-					'bower_components/jquery/jquery.js',
-					// bowerのhoganはおかしかったのでnpmから入れた
-					'node_modules/hogan.js/web/builds/2.0.0/hogan-2.0.0.js',
+					'bower_components/jquery/dist/jquery.js',
+					'bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.js',
 				],
 				dest: 'js/lib.js',
 			},
@@ -117,7 +116,9 @@ module.exports = function(grunt) {
 	});
 
 
-	require('jit-grunt')(grunt);
+	require('jit-grunt')(grunt, {
+		hogan: 'grunt-templates-hogan',
+	});
 
 	grunt.registerTask('js', ['hogan', 'coffee', 'concat:jslib', 'concat:js', 'uglify', 'clean']);
 	grunt.registerTask('css', ['concat:csslib', 'compass']);
